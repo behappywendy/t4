@@ -52,14 +52,51 @@ header {
 header .wrap_menu {
     padding: 0;
 }
-
 .wrap_menu a {
     color: #fff;
+    font-weight: 600;
 }
+.wrap_menu a:hover {
+    color: rgb(32, 21, 18);
+}
+@media (min-width: 992px) {
+    .wrap_menu a:hover {
+        color: rgb(255, 201, 71);
+    }
+}
+
 .wrap_menu button {
     background-color: rgb(255, 201, 71);
 }
+
+.header_menu li:hover {
+    background-color: rgb(255, 201, 71);
+}
+.header_menu li {
+    text-align: center;
+}
+@media (min-width: 992px) {
+    .header_menu li:hover {
+        background-color: initial;
+    }
+}
+#present {
+    font-size: 18px;
+    color: #cd5c5c;
+    text-shadow: 1px 2px rgb(143, 101, 3);
+}
+@media (min-width: 992px) {
+    #present {
+        font-size: 18px;
+        color: rgb(255, 201, 71);
+        text-shadow: 1px 2px rgb(143, 101, 3);
+    }
+}
+
 /* main */
+main {
+    background: url(images/bg-body.png);
+}
 /* chair content */
 .chair {
     position: relative;
@@ -87,7 +124,6 @@ header .wrap_menu {
 .chair img {
     width: 100%;
 }
-
 .view_detail {
     background: url(images/buttons.png);
     width: 110px;
@@ -115,6 +151,11 @@ header .wrap_menu {
     text-shadow: 0px 1px #ffff;
     margin-bottom: 30px;
 }
+@media (min-width: 992px) {
+    .chair_text h2 {
+        font-size: 40px;
+    }
+}
 .chair_text {
     background: url(images/bg-pattern.jpg);
     height: 100%;
@@ -138,11 +179,7 @@ header .wrap_menu {
 .wrap_img img {
     width: 100%;
 }
-/* @media (min-width: 992px) {
-    .wrap_img img {
-        width: 100%;
-    }
-} */
+
 /* product */
 .product_border {
     height: 5px;
@@ -172,13 +209,29 @@ h3 {
 /* information */
 .information {
     flex-direction: column;
+    background-color: #fff;
 }
 @media (min-width: 992px) {
     .information {
         flex-direction: row;
     }
 }
-
+.information h4 {
+    font-size: 18px;
+    color: rgb(124, 124, 124);
+    font-weight: 900;
+}
+.information p {
+    margin: 0;
+    font-family: emoji;
+    color: rgb(75, 55, 48);
+}
+/* .information p:nth-child(2){
+    letter-spacing: 2px;　
+} */
+.information .card {
+    border-radius: 0;
+}
 .vertical_border {
     height: 10px;
     background: url(images/ds_border_bg_b.png);
@@ -198,27 +251,15 @@ h3 {
     }
 }
 .contact p {
+    font-weight: 900;
     font-size: 24px;
 }
 .contact p:nth-child(2) {
     margin-bottom: 20px;
 }
-.information h4 {
-    font-size: 16px;
-    color: rgb(124, 124, 124);
-}
-.information p {
-    margin: 0;
-    font-family: emoji;
-    color: rgb(32, 21, 18);
-}
-.information .card {
-    border-radius: 0;
-}
 
 /* contact */
 .container h4 {
-    margin-bottom: 10px;
     font-family: emoji;
 }
 .blog {
@@ -233,9 +274,26 @@ h3 {
         background-size: 5px;
     }
 }
-
+.blog small {
+    color: rgb(77, 53, 32);
+    font-family: fantasy;
+}
 .blog h4 {
     margin-bottom: 20px;
+}
+.blog p {
+    color: rgb(77, 53, 32);
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.blog a {
+    color: rgb(77, 53, 32);
+    font-weight: 600;
+    text-decoration: none;
+}
+.blog a:hover {
+    color: #808000;
+    background: rgb(77, 53, 32);
 }
 .blog .card-body {
     height: 100%;
@@ -248,23 +306,22 @@ h3 {
         object-fit: cover;
     }
 }
-/* @media (min-width: 992px) {
-    .carving {
-        margin-right: 16px;
-    }
-}
-@media (min-width: 992px) {
-    .resort {
-        margin-left: 16px;
-    }
-} */
 .information .card {
     border: 3px solid rgb(241, 240, 235);
+}
+.blog .resort {
+    margin-top: 20px;
+}
+@media (min-width: 768px) {
+    .blog .resort {
+        margin-top: 0px;
+    }
 }
 /* footer */
 footer {
     padding: 50px 0px;
     background: rgb(226, 179, 63);
+    border-top: 2px solid #fff;
 }
 /* showroom */
 footer .showroom {
@@ -277,8 +334,21 @@ footer .showroom {
 .showroom .card-body {
     padding: 0;
 }
-
+.showroom {
+    border-bottom: 3px dotted #000;
+    margin-bottom: 10px;
+}
+@media (min-width: 992px) {
+    .showroom {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+}
 /* post */
+.post .date_title {
+    font-weight: 600;
+    font-size: 20px;
+}
 @media (min-width: 992px) {
     footer .post {
         background: url(images/ds_border_bg_c.png) repeat-y;
@@ -298,23 +368,25 @@ footer .showroom {
     margin: 0;
 }
 input[type='email'] {
-    width: 300px;
+    width: 100%;
     margin-bottom: 10px;
     border: 2px solid rgb(75, 66, 58);
 }
 /* social */
-footer .social {
-    padding: 16px;
-    background: url(images/ds_border_bg_d.png) repeat-x;
-    background-size: 5px;
-}
+
 @media (min-width: 992px) {
     footer .social {
         padding: 0px 16px;
         background: url(images/ds_border_bg_c.png) repeat-y;
         background-size: 5px;
         padding: 0px 16px;
+        border-bottom: none;
     }
+}
+.socail_media {
+    background: url(images/ds_border_bg_d.png) repeat-x;
+    background-size: 5px;
+    padding: 16px 0px;
 }
 .social a {
     display: block;
@@ -323,7 +395,9 @@ footer .social {
     font-weight: 600;
 }
 .social a:hover {
-    color: crimson;
+    color: orange;
+    font-weight: 900;
+    text-shadow: 1px 1px red;
 }
 .sign_up {
     background: url(images/buttons.png);
@@ -332,6 +406,7 @@ footer .social {
     width: 90px;
     text-align: center;
     margin-bottom: 20px;
+    font-size: 10px;
 }
 footer h5 {
     color: rgb(77, 53, 32);
@@ -362,21 +437,28 @@ footer h5 {
     width: 40px;
     height: 33px;
 }
+/* footer_inner */
 .footer_inner {
     padding: 20px;
-}
-.footer_inner {
+    color: rgb(182, 135, 17);
     background: url('images/ds_border_bg_d.png');
     background-repeat: repeat-x;
     background-size: 5px;
+    text-align: center;
 }
+
 .footer_inner a {
     color: rgb(77, 53, 32);
     text-decoration: none;
+    color: rgb(182, 135, 17);
+    font-weight: 600;
 }
-.footer_inner a + a {
-    margin-left: 20px;
+@media (min-width: 992px) {
+    .footer_inner a + a {
+        margin-left: 20px;
+    }
 }
+
 @media (min-width: 992px) {
     .footer_inner {
         display: flex;
@@ -385,8 +467,21 @@ footer h5 {
 }
 nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
-nav a:hover {
+@media (min-width: 576px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+/* nav a {
+    flex-shrink: 1;
+} */
+footer nav a:hover {
     color: red;
+    font-weight: 600;
+    text-shadow: 1px 1px pink;
+    transition-delay: 0.3s;
 }
