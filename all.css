@@ -1,9 +1,9 @@
 .template {
     max-width: 100%;
 }
-/* * {
+* {
     outline: red solid 1px;
-} */
+}
 /* css reset */
 * {
     margin: 0;
@@ -68,12 +68,11 @@ header .wrap_menu {
 .wrap_menu button {
     background-color: rgb(255, 201, 71);
 }
-
-.header_menu li:hover {
-    background-color: rgb(255, 201, 71);
-}
 .header_menu li {
     text-align: center;
+}
+.header_menu li:hover {
+    background-color: rgb(255, 201, 71);
 }
 @media (min-width: 992px) {
     .header_menu li:hover {
@@ -92,17 +91,18 @@ header .wrap_menu {
         text-shadow: 1px 2px rgb(143, 101, 3);
     }
 }
-
+.header_menu a {
+    display: inline-block;
+}
 /* main */
 main {
     background: url(images/bg-body.png);
 }
-/* chair content */
+/* chair*/
 .chair {
     position: relative;
 }
 .container .chair_price {
-    /* background-color: orange; */
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -115,44 +115,45 @@ main {
         bottom: 40px;
     }
 }
-@media (min-width: 992px) {
-    .chair {
-        border-bottom: 2px solid #fff;
-        border-left: 2px solid #fff;
-    }
-}
 .chair img {
     width: 100%;
 }
 .view_detail {
-    background: url(images/buttons.png);
-    width: 110px;
-    height: 35px;
+    background: url(images/buttons.png) no-repeat 0 0;
+    width: 109px;
+    height: 34px;
+}
+.view_detail:hover {
+    background: url(images/buttons.png) no-repeat -114px 0;
+    width: 109px;
+    height: 34px;
 }
 .chair_price p {
     margin: 0;
     color: rgb(81, 78, 76);
     text-align: center;
 }
-/* .chair_price :nth-child(1) {
-    font-family: fantasy;
-} */
 .view_detail p {
     line-height: 35px;
     font-size: 14px;
     font-weight: 600;
     color: rgb(155, 109, 3);
 }
-
+.wrap_chair {
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid#fff;
+}
 .chair_text h2 {
     font-size: 30px;
     color: rgb(32, 21, 18);
     font-family: sans-serif;
     text-shadow: 0px 1px #ffff;
-    margin-bottom: 30px;
+    margin-bottom;: 30px
 }
 @media (min-width: 992px) {
     .chair_text h2 {
+        text-align: center;
         font-size: 40px;
     }
 }
@@ -160,27 +161,21 @@ main {
     background: url(images/bg-pattern.jpg);
     height: 100%;
     background-size: cover;
-}
-@media (min-width: 992px) {
-    .chair_text {
-        padding: 60px;
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
-    }
-}
-@media (min-width: 992px) {
-    .chair_text h2 {
-        text-align: center;
-    }
+    padding: 60px  60px;
 }
 .chair_text p {
-    font-family: fantasy;
+    font-family: sans-serif;
+    word-spacing: 3px;
+    line-height: 30px;
 }
 .wrap_img img {
     width: 100%;
 }
 
 /* product */
+.product p{
+    word-spacing: 3px;
+}
 .product_border {
     height: 5px;
     background: url(images/ds_border_bg_a.png);
@@ -206,6 +201,7 @@ main {
 h3 {
     color: rgb(255, 201, 71);
 }
+
 /* information */
 .information {
     flex-direction: column;
@@ -222,13 +218,9 @@ h3 {
     font-weight: 900;
 }
 .information p {
-    margin: 0;
-    font-family: emoji;
+    font-family: sans-serif;
     color: rgb(75, 55, 48);
 }
-/* .information p:nth-child(2){
-    letter-spacing: 2px;　
-} */
 .information .card {
     border-radius: 0;
 }
@@ -260,22 +252,17 @@ h3 {
 
 /* contact */
 .container h4 {
-    font-family: emoji;
+    font-family: sans-serif;
 }
-.blog {
-    background: url(images/ds_border_bg_b.png);
-    background-repeat: repeat-x;
-    background-size: 10px;
-}
+
 @media (min-width: 992px) {
-    .blog {
+    .wrap_blog {
         background: url(images/ds_border_bg_b.png);
         background-repeat: repeat-y;
-        background-size: 5px;
+        background-size: 10px;
     }
 }
-.blog small {
-    color: rgb(77, 53, 32);
+.blog .card_date {
     font-family: fantasy;
 }
 .blog h4 {
@@ -283,7 +270,6 @@ h3 {
 }
 .blog p {
     color: rgb(77, 53, 32);
-    margin-bottom: 30px;
     font-weight: 600;
 }
 .blog a {
@@ -324,6 +310,13 @@ footer {
     border-top: 2px solid #fff;
 }
 /* showroom */
+.showroom .card a {
+    color: #000;
+    text-decoration: none;
+}
+.showroom .card a:hover {
+    color: red;
+}
 footer .showroom {
     padding: 0 16px 0 0;
 }
@@ -345,24 +338,34 @@ footer .showroom {
     }
 }
 /* post */
-.post .date_title {
+.post {
+    display: flex;
+}
+.post .post_title {
     font-weight: 600;
     font-size: 20px;
-}
-@media (min-width: 992px) {
-    footer .post {
-        background: url(images/ds_border_bg_c.png) repeat-y;
-        background-size: 5px;
-        padding: 0px 16px;
-    }
+    margin-bottom: 10px;
 }
 .date {
     background-color: rgb(77, 53, 32);
     color: #fff;
     font-weight: 600;
     text-align: center;
-    margin: 0 auto;
     border-radius: 5px;
+    display: inline-block;
+    width: 15%;
+    height: 15%;
+    margin-right: 3%;
+}
+.post_text {
+    width: 75%;
+}
+@media (min-width: 992px) {
+    footer .post_border {
+        background: url(images/ds_border_bg_c.png) repeat-y;
+        background-size: 5px;
+        padding: 0px 16px;
+    }
 }
 .date p {
     margin: 0;
@@ -372,10 +375,11 @@ input[type='email'] {
     margin-bottom: 10px;
     border: 2px solid rgb(75, 66, 58);
 }
+
 /* social */
 
 @media (min-width: 992px) {
-    footer .social {
+    footer .wrap_social {
         padding: 0px 16px;
         background: url(images/ds_border_bg_c.png) repeat-y;
         background-size: 5px;
@@ -388,25 +392,26 @@ input[type='email'] {
     background-size: 5px;
     padding: 16px 0px;
 }
-.social a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-}
-.social a:hover {
-    color: orange;
-    font-weight: 900;
-    text-shadow: 1px 1px red;
-}
-.sign_up {
-    background: url(images/buttons.png);
-    background-position: -9px 27px;
-    line-height: 27px;
-    width: 90px;
+.social .sign_up {
+    font-size: 10px;
     text-align: center;
     margin-bottom: 20px;
-    font-size: 10px;
+    line-height: 27px;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    background: url(images/buttons.png);
+    background-position: -13px -39px;
+    width: 83px;
+    height: 26px;
+}
+.social .sign_up:hover {
+    color: rgb(241, 229, 62);
+    font-weight: 900;
+    background: url(images/buttons.png);
+    background-position: -127px -39px;
+    width: 83px;
+    height: 26px;
 }
 footer h5 {
     color: rgb(77, 53, 32);
