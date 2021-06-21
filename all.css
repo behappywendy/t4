@@ -1,9 +1,9 @@
 .template {
     max-width: 100%;
 }
-* {
+/* * {
     outline: red solid 1px;
-}
+} */
 /* css reset */
 * {
     margin: 0;
